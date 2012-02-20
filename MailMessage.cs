@@ -107,11 +107,11 @@ namespace AE.Net.Mail {
       }
 
       Date = Headers.GetDate();
-      To = Headers.GetAddresses("To").ToList();
-      Cc = Headers.GetAddresses("Cc").ToList();
-      Bcc = Headers.GetAddresses("Bcc").ToList();
+      To = Headers.GetAddresses("To");
+      Cc = Headers.GetAddresses("Cc");
+      Bcc = Headers.GetAddresses("Bcc");
       Sender = Headers.GetAddresses("Sender").FirstOrDefault();
-      ReplyTo = Headers.GetAddresses("Reply-To").ToList();
+      ReplyTo = Headers.GetAddresses("Reply-To");
       From = Headers.GetAddresses("From").FirstOrDefault();
       MessageID = Headers["Message-ID"].RawValue;
 

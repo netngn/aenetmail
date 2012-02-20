@@ -42,7 +42,7 @@ namespace AE.Net.Mail {
       if (DateTime.TryParse(input, out result)) {
         return result;
       } else {
-        return null;
+          return DateTimeParser.ConvertWithTimezone(input);
       }
     }
 
